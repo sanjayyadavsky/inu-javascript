@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculate Slope</title>
+  </head>
+  <body>
+    <h1>Calculate Slope</h1>
+    <p>Enter the coordinates of two points:</p>
+    <label for="x1">Point 1 X:</label>
+    <input type="number" id="x1">
+
+    <label for="y1">Point 1 Y:</label>
+    <input type="number" id="y1">
+    <br>
+    <label for="x2">Point 2 X:</label>
+    <input type="number" id="x2">
+    <label for="y2">Point 2 Y:</label>
+    <input type="number" id="y2">
+    <br>
+    <button onclick="calculateSlope()">Calculate Slope</button>
+    <p id="result"></p>
+    <script>
+      function calculateSlope() {
+        // Get the values from the input fields
+        const x1 = parseInt(document.getElementById("x1").value);
+        const y1 = parseInt(document.getElementById("y1").value);
+        const x2 = parseInt(document.getElementById("x2").value);
+        const y2 = parseInt(document.getElementById("y2").value);
+
+        // Calculate the slope
+        const slope = (y2 - y1) / (x2 - x1);
+
+        // Display the result
+        document.getElementById("result").innerHTML = `The slope between (${x1},${y1}) and (${x2},${y2}) is ${slope}.`;
+      }
+    </script>
+    
+  </body>
+</html>
